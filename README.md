@@ -32,7 +32,7 @@ XCoords came to fruition as a response to the removal of the gamerule command re
 
 | Downloads                                         | API       | Downloads                                                                 |
 |---------------------------------------------------|-----------|---------------------------------------------------------------------------|
-| latest version (0.0.1)                       | 5.x       | Very soon...                |
+| latest version (0.0.1)                       | 5.x       | [GitHub Release](https://github.com/xrde4/XCoords/releases/download/0.1/Xcoords.phar)                |
 <br>
 
 ## 📁 Supported software:
@@ -40,7 +40,7 @@ XCoords came to fruition as a response to the removal of the gamerule command re
 
 ## 🔧 How to install XCoords?
 
-1) [Very soon](https://github.com/xrde4/) latest stable released version from poggit.
+1) [Download](https://github.com/xrde4/XCoords/releases/download/0.1/Xcoords.phar) latest stable released version from poggit.
 2) Move dowloaded file to your server **/plugins/** folder
 3) Restart the server
 

@@ -1,0 +1,7 @@
+name: XCoords
+main: XCoords\XCoords
+version: 1.0
+api: 5.0.0
+permissions:
+  coords.x.perms:
+    default: OP

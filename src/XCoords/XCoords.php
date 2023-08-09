@@ -46,7 +46,7 @@ class XCoords extends PluginBase implements Listener
 	
 	 public function onJoin(PlayerJoinEvent $event){
 		 if(!$this->config->exists(strtolower($event->getPlayer()->getName()))){
-			 if($event->getPlayer()->hasPermission('coords.x.perms')){
+			 if($event->getPlayer()->hasPermission('xcoords.perms')){
 				$pk = new GameRulesChangedPacket();
 				$pk->gameRules = ["showcoordinates" =>  new BoolGameRule(true, true)];
 				$event->getPlayer()->getNetworkSession()->sendDataPacket($pk);

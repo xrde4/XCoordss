@@ -16,7 +16,7 @@
  
 declare(strict_types=1);
  
-namespace XCoords;
+namespace xrde4\XCoords;
 
 use pocketmine\Server;
 use pocketmine\utils\Config;

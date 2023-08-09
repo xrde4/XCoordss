@@ -33,7 +33,7 @@ class XCoordsCommand extends Command{
         	return;
         }
 		
-		if($this->plugin->users->getNested(strtolower($sender->getName())) == "false" or !$this->plugin->users->exists(strtolower($sender->getName()))){
+		if(!$this->plugin->users->exists(strtolower($sender->getName())) or $this->plugin->users->getNested(strtolower($sender->getName())) == "false"){
 			$sender->sendMessage($this->plugin->LanguageMessage("coords_on_message"));
 			$pk = new GameRulesChangedPacket();
 			$pk->gameRules = ["showcoordinates" =>  new BoolGameRule(true, true)];

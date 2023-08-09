@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace xrde4\XCoords\command;
 
 use pocketmine\Server;
+use xrde4\XCoords\XCoords;
 use pocketmine\plugin\Plugin;
 use pocketmine\plugin\PluginBase;
 use pocketmine\player\Player;
@@ -14,7 +15,7 @@ use pocketmine\network\mcpe\protocol\types\BoolGameRule;
 
 class XCoordsCommand extends Command{
 
-	public function __construct($plugin){
+	public function __construct(XCoords $plugin){
 
 		parent::__construct("coords", $plugin->LanguageMessage("description"), "/coords");
 	 	$this->setPermission('xcoords.perms');

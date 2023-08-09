@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace XCoords\command;
+namespace xrde4\XCoords\command;
 
 use pocketmine\Server;
 use pocketmine\plugin\Plugin;
@@ -17,13 +17,13 @@ class XCoordsCommand extends Command{
 	public function __construct($plugin){
 
 		parent::__construct("coords", $plugin->LanguageMessage("description"), "/coords");
-	 	$this->setPermission('coords.x.perms');
+	 	$this->setPermission('xcoords.perms');
 		$this->plugin = $plugin;
 	}
 
 	public function execute(CommandSender $sender, string $commandLabel, array $args){
 
-		if (!$sender->hasPermission('coords.x.perms')) {
+		if (!$sender->hasPermission('xcoords.perms')) {
             $sender->sendMessage($this->plugin->LanguageMessage("no_permissions"));
             return FALSE;
         }	

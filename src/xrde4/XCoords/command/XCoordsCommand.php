@@ -9,25 +9,25 @@ use xrde4\XCoords\XCoords;
 use pocketmine\plugin\Plugin;
 use pocketmine\plugin\PluginBase;
 use pocketmine\plugin\PluginOwned;
+use pocketmine\plugin\PluginOwnedTrait;
 use pocketmine\player\Player;
 use pocketmine\command\{Command, CommandSender};
 use pocketmine\network\mcpe\protocol\GameRulesChangedPacket;
 use pocketmine\network\mcpe\protocol\types\BoolGameRule;
 
 class XCoordsCommand extends Command{
+	use PluginOwnedTrait {
+		__construct as setOwningPlugin;
+	}
 
-	private XCoords $plugin;
 	public function __construct(XCoords $plugin){
+	$this->setOwningPlugin($plugin);
 
 		parent::__construct("coords", $plugin->LanguageMessage("description"), "/coords");
 	 	$this->setPermission('xcoords.perms');
 		$this->plugin = $plugin;
 	}
 
-	public function getOwningPlugin(): Plugin
-    {
-        return $this->plugin;
-    }
 
 	public function execute(CommandSender $sender, string $commandLabel, array $args){
 

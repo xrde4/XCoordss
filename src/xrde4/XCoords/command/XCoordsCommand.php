@@ -31,8 +31,6 @@ class XCoordsCommand extends Command implements PluginOwned {
 	public function getOwningPlugin(): Plugin {
 	   return $this->plugin;
 	}
-	
-
 
 	public function execute(CommandSender $sender, string $commandLabel, array $args){
 

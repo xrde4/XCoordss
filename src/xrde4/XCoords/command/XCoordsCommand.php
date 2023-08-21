@@ -15,7 +15,7 @@ use pocketmine\command\{Command, CommandSender};
 use pocketmine\network\mcpe\protocol\GameRulesChangedPacket;
 use pocketmine\network\mcpe\protocol\types\BoolGameRule;
 
-class XCoordsCommand extends Command{
+class XCoordsCommand extends Command implements PluginOwned {
 	use PluginOwnedTrait {
 		__construct as setOwningPlugin;
 	}
@@ -27,6 +27,11 @@ class XCoordsCommand extends Command{
 	 	$this->setPermission('xcoords.perms');
 		$this->plugin = $plugin;
 	}
+
+	public function getOwningPlugin(): Plugin {
+	   return $this->plugin;
+	}
+	
 
 
 	public function execute(CommandSender $sender, string $commandLabel, array $args){

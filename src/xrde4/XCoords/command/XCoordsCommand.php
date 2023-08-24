@@ -20,7 +20,7 @@ class XCoordsCommand extends Command implements PluginOwned {
 		__construct as setOwningPlugin;
 	}
 
-	public function __construct(XCoords $plugin){
+	public function __construct(private XCoords $plugin){
 	$this->setOwningPlugin($plugin);
 
 		parent::__construct("coords", $plugin->LanguageMessage("description"), "/coords");

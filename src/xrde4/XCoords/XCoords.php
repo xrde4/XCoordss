@@ -29,6 +29,8 @@ use pocketmine\network\mcpe\protocol\types\BoolGameRule;
 
 class XCoords extends PluginBase implements Listener
 {
+    public Config $users;
+    
     public function onEnable(): void {
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
 		$this->users = new Config($this->getDataFolder()."config.yml", Config::YAML,[
@@ -75,4 +77,3 @@ class XCoords extends PluginBase implements Listener
 		}
 	}
 }
-	
